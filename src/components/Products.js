@@ -268,11 +268,11 @@ const ProductRange = () => {
   }, [searchTerm, selectedCategory]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % Math.ceil(filteredProducts.length / 3));
+    setCurrentSlide((prev) => (prev + 1) % Math.ceil(filteredProducts.length / 4));
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + Math.ceil(filteredProducts.length / 3)) % Math.ceil(filteredProducts.length / 3));
+    setCurrentSlide((prev) => (prev - 1 + Math.ceil(filteredProducts.length / 4)) % Math.ceil(filteredProducts.length / 4));
   };
 
   const handleRequestFormChange = (field, value) => {
@@ -330,16 +330,16 @@ const ProductRange = () => {
           {viewMode === 'grid' ? (
             <>
               {/* Product Number */}
-              <div className={`absolute top-4 left-4 z-20 w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white shadow-lg transition-all duration-500 bg-gradient-to-r ${product.color} ${isHovered ? 'transform scale-125 rotate-12' : 'transform scale-100 rotate-0'}`}>
+              <div className={`absolute top-4 left-4 z-20 w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white shadow-lg transition-all duration-500 bg-gradient-to-r from-orange-500 to-red-500 ${isHovered ? 'transform scale-125 rotate-12' : 'transform scale-100 rotate-0'}`}>
                 {product.id}
               </div>
 
               {/* Image Section */}
-              <div className="relative overflow-hidden h-64 rounded-t-3xl">
+              <div className="relative overflow-hidden h-48 rounded-t-3xl">
                 <img 
                   src={product.image} 
                   alt={product.name}
-                  className="absolute inset-0 w-full h-full object-contain"
+                  className="absolute inset-0 w-full h-full object-contain p-2"
                 />
                 {/* Light overlay only on hover */}
                 <div className={`absolute inset-0 bg-black/10 transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
@@ -358,15 +358,15 @@ const ProductRange = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-4">
                 {/* Category Badge */}
-                <div className={`inline-flex items-center gap-1 bg-gradient-to-r ${product.color} text-white px-3 py-1 rounded-full text-xs font-medium mb-3 shadow-sm`}>
+                <div className="inline-flex items-center gap-1 bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 py-0.5 rounded-full text-xs font-medium mb-2 shadow-sm">
                   <Package className="w-3 h-3" />
                   {product.category === 'Active Pharmaceutical Ingredients' ? 'API' : 'Excipient'}
                 </div>
 
                 {/* Product Name */}
-                <h3 className="text-xl font-bold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-gray-900">
+                <h3 className="text-lg font-bold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-gray-900">
                   {product.name}
                 </h3>
 
@@ -462,7 +462,7 @@ const ProductRange = () => {
           )}
 
           {/* Hover Glow Effect */}
-          <div className={`absolute inset-0 ${viewMode === 'grid' ? 'rounded-3xl' : 'rounded-2xl'} bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none`}></div>
+          <div className={`absolute inset-0 ${viewMode === 'grid' ? 'rounded-3xl' : 'rounded-2xl'} bg-gradient-to-br from-orange-500 to-red-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none`}></div>
         </div>
       </div>
     );
@@ -483,10 +483,10 @@ const ProductRange = () => {
             <Sparkles className="w-4 h-4" />
             Premium Quality
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             RANGE OF <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">PRODUCTS</span>
           </h1>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-700 mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-700 mb-6">
             WE OFFER
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mx-auto"></div>
@@ -625,8 +625,8 @@ const ProductRange = () => {
                 )}
 
                 {/* Grid Layout */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                  {filteredProducts.slice(currentSlide * 3, currentSlide * 3 + 3).map((product, index) => (
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                  {filteredProducts.slice(currentSlide * 4, currentSlide * 4 + 4).map((product, index) => (
                     <ProductCard key={product.id} product={product} index={index} />
                   ))}
                 </div>

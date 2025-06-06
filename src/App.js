@@ -34,7 +34,7 @@ function App() {
                   About USECTA
                 </div>
                 
-                <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-8 leading-tight">
+                <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 leading-tight">
                   WHO <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">WE ARE</span>
                 </h1>
                 

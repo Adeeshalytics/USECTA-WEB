@@ -115,7 +115,7 @@ const Hero = () => {
                 </svg>
               </div>
               <div className="text-center sm:text-left">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight leading-none">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white tracking-tight leading-none">
                   USECTA
                 </h1>
                 <p className="text-blue-200 text-sm sm:text-base lg:text-lg font-medium tracking-wide mt-2">

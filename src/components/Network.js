@@ -100,14 +100,14 @@ const USECTANetworkPage = () => {
           </div>
 
           <div className="mb-12">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
               PHARMACEUTICAL SUPPLY
               <br />
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 WHERE YOU NEED IT, WHEN YOU NEED IT.
               </span>
               <br />
-              <span className="text-4xl md:text-5xl font-light">
+              <span className="text-3xl md:text-4xl font-light">
                 TRUST USECTA
               </span>
             </h1>

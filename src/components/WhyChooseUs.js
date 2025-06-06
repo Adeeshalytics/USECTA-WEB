@@ -50,7 +50,7 @@ const WhyChooseUs = () => {
             <Star className="w-4 h-4" />
             Why Choose Us
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold text-gray-800 mb-6 relative">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 relative">
             WHY <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">CHOOSE US</span>
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
           </h1>
