@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Send, MessageCircle, Clock } from 'lucide-react';
 
 const ContactUsPage = () => {
@@ -74,6 +75,14 @@ const ContactUsPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Contact Us - USECTA | Pharmaceutical Raw Materials Supplier</title>
+        <meta 
+          name="description" 
+          content="Contact USECTA for all your pharmaceutical raw material needs. We provide quality API, chemical solutions, and manufacturing services. Get in touch with our team today."
+        />
+        <link rel="canonical" href="/contact" />
+      </Helmet>
       {/* Header Section */}
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-8">

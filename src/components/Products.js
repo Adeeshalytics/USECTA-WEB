@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ChevronLeft, ChevronRight, Eye, Package, Beaker, Shield, Award, Sparkles, ArrowRight, Search, Filter, Grid, List, Plus, X, Send, Mail, Phone, User, MessageSquare } from 'lucide-react';
 
 // Import all images individually
@@ -470,6 +471,15 @@ const ProductRange = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-20 px-6 relative overflow-hidden">
+      <Helmet>
+        <title>Our Products - USECTA | Pharmaceutical Raw Materials & APIs</title>
+        <meta 
+          name="description" 
+          content="Explore USECTA's extensive range of pharmaceutical raw materials, APIs, and chemical solutions. High-quality products for pharmaceutical manufacturing and research."
+        />
+        <link rel="canonical" href="/products" />
+      </Helmet>
+
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse"></div>
