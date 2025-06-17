@@ -1,0 +1,6 @@
+https://usecta-web.vercel.app/
+https://usecta-web.vercel.app/about
+https://usecta-web.vercel.app/contact
+https://usecta-web.vercel.app/networks
+https://usecta-web.vercel.app/products
+https://usecta-web.vercel.app/why-choose-us
