@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="bg-gray-800 text-white py-8">
       <div className="max-w-6xl mx-auto px-6">
@@ -22,11 +29,46 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-orange-400">QUICK LINKS</h4>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer">HOME</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer">ABOUT US</Link></li>
-              <li><Link to="/products" className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer">PRODUCTS</Link></li>
-              <li><Link to="/networks" className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer">NETWORKS</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer">CONTACT US</Link></li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('/')}
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer text-left"
+                >
+                  HOME
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('/about')}
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer text-left"
+                >
+                  ABOUT US
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('/products')}
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer text-left"
+                >
+                  PRODUCTS
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('/networks')}
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer text-left"
+                >
+                  NETWORKS
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('/contact')}
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer text-left"
+                >
+                  CONTACT US
+                </button>
+              </li>
             </ul>
           </div>
 
