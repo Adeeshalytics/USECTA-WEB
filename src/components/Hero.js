@@ -103,7 +103,7 @@ const Hero = () => {
 
         {/* Main Content */}
         <div 
-          className={`relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${
+          className={`relative z-10 min-h-screen flex items-start justify-center px-4 sm:px-6 lg:px-8 sm:pt-10 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
