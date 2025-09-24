@@ -108,33 +108,6 @@ const Hero = () => {
           }`}
         >
           <div className="max-w-7xl mx-auto text-center">
-            {/* Logo Section */}
-            <div className="mb-16 transform transition-all duration-1000 hover:scale-105">
-              <div className="inline-flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center shadow-2xl">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-white w-8 h-8 sm:w-10 sm:h-10">
-                    <circle cx="6" cy="6" r="2" fill="currentColor" />
-                    <circle cx="18" cy="6" r="2" fill="currentColor" />
-                    <circle cx="6" cy="18" r="2" fill="currentColor" />
-                    <circle cx="18" cy="18" r="2" fill="currentColor" />
-                    <circle cx="12" cy="12" r="2" fill="currentColor" />
-                    <line x1="8" y1="6" x2="10" y2="12" stroke="currentColor" strokeWidth="2" />
-                    <line x1="14" y1="12" x2="16" y2="6" stroke="currentColor" strokeWidth="2" />
-                    <line x1="8" y1="18" x2="10" y2="12" stroke="currentColor" strokeWidth="2" />
-                    <line x1="14" y1="12" x2="16" y2="18" stroke="currentColor" strokeWidth="2" />
-                  </svg>
-                </div>
-                <div className="text-center sm:text-left">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white tracking-tight leading-none">
-                    USECTA
-                  </h1>
-                  <p className="text-blue-200 text-sm sm:text-base lg:text-lg font-medium tracking-wide mt-2">
-                    PHARMACEUTICAL RAW MATERIALS
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* Dynamic Content Sections */}
             <div className="relative mb-16">
               {sections.map((section, index) => (

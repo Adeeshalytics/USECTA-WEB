@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import usectaLogo from './usecta.png';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,22 +26,11 @@ const Header = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
-                  <div className="relative">
-                    {/* Molecule/Chemical structure icon */}
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white">
-                      <circle cx="6" cy="6" r="2" fill="currentColor" />
-                      <circle cx="18" cy="6" r="2" fill="currentColor" />
-                      <circle cx="6" cy="18" r="2" fill="currentColor" />
-                      <circle cx="18" cy="18" r="2" fill="currentColor" />
-                      <circle cx="12" cy="12" r="2" fill="currentColor" />
-                      <line x1="8" y1="6" x2="10" y2="12" stroke="currentColor" strokeWidth="2" />
-                      <line x1="14" y1="12" x2="16" y2="6" stroke="currentColor" strokeWidth="2" />
-                      <line x1="8" y1="18" x2="10" y2="12" stroke="currentColor" strokeWidth="2" />
-                      <line x1="14" y1="12" x2="16" y2="18" stroke="currentColor" strokeWidth="2" />
-                    </svg>
-                  </div>
-                </div>
+                <img 
+                  src={usectaLogo} 
+                  alt="USECTA Logo" 
+                  className="w-10 h-10 object-contain transition-all duration-300 group-hover:scale-105"
+                />
               </div>
               
               {/* Company Name */}
